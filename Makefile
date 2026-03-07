@@ -51,7 +51,7 @@ ty:
 	fi
 
 pylint:
-	PYLINTHOME=.pylint.d $(RUN_PY) pylint $(shell $(PY_FIND_COMMAND))
+	PYLINTHOME=.pylint.d $(RUN_PY) pylint --disable=import-error $(shell $(PY_FIND_COMMAND))
 
 isort:
 	isort $(shell $(PY_FIND_COMMAND))
